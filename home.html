@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Singh Phishing Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .warning {
+            background: #fff3e0;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #ffa000;
+        }
+        .platforms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .platform {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .platform:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .platform img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        .platform a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .facebook { border-top: 4px solid #1877f2; }
+        .instagram { border-top: 4px solid #e1306c; }
+        .twitter { border-top: 4px solid #1da1f2; }
+        .gmail { border-top: 4px solid #db4437; }
+        .facebook a { background: #1877f2; }
+        .instagram a { background: linear-gradient(45deg, #405de6, #833ab4, #c13584, #e1306c, #fd1d1d); }
+        .twitter a { background: #1da1f2; }
+        .gmail a { background: #db4437; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Singh Phishing Tool</h1>
+        
+        <div class="warning">
+            <strong>Educational Use Only:</strong> This system simulates phishing for training purposes. 
+            No real credentials are stored or collected.
+        </div>
+        
+        <div class="platforms">
+            <div class="platform facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                <h3>Facebook</h3>
+                <a href="/facebook">Start Simulation</a>
+            </div>
+            
+            <div class="platform instagram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
+                <h3>Instagram</h3>
+                <a href="/instagram">Start Simulation</a>
+            </div>
+            
+            <div class="platform twitter">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter">
+                <h3>Twitter</h3>
+                <a href="/twitter">Start Simulation</a>
+            </div>
+            
+            <div class="platform gmail">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail">
+                <h3>Gmail</h3>
+                <a href="/gmail">Start Simulation</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
