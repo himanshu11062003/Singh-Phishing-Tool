@@ -34,7 +34,7 @@ Singh-Phishing-Tool/
 
 1. Clone the Repository
 
-git clone https://github.com/YOUR_USERNAME/Singh-Phishing-Tool.git
+git clone https://github.com/himanshu11062003/Singh-Phishing-Tool.git
 cd Singh-Phishing-Tool
 
 2. Set Up Virtual Environment (Optional)
