@@ -1,0 +1,6 @@
+creds/*.txt
+simulations.log
+*.log
+__pycache__/
+*.pyc
+.env
